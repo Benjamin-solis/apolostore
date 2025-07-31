@@ -1,0 +1,15 @@
+<% content_for :title, "Editar Producto" %>
+
+<div class="mb-8">
+  <div class="flex items-center space-x-4">
+    <%= link_to productos_path, class: "text-blue-600 hover:text-blue-800" do %>
+      <svg class="w-5 h-5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    <% end %>
+    <h1 class="text-3xl font-bold text-gray-900">✏️ Editar Producto</h1>
+  </div>
+  <p class="text-gray-600 mt-2">Modifica la información de <span class="font-semibold"><%= @producto.nombre %></span></p>
+</div>
+
+<%= render "form", producto: @producto %>
